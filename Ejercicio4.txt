@@ -1,0 +1,45 @@
+Nombre: Christian Hernández
+Evaluador: Daniel Malvaez
+Calificación: 10
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+    String player1 = scanner.nextLine();
+
+    System.out.print("Turno del jugador 2 (introduzca piedra, papel o tijeras): ");
+    String player2 = scanner.nextLine();
+
+    scanner.close();
+
+    if (player1.equals(player2)) {
+      System.out.println("Empate");
+    } else {
+      int ganador = 2;
+
+      switch (player1) {
+        case "piedra":
+          if (player2.equals("tijeras")) {
+            ganador = 1;
+          }
+          break;
+
+        case "papel":
+          if (player2.equals("piedra")) {
+            ganador = 1;
+          }
+          break;
+
+        case "tijera":
+          if (player2.equals("papel")) {
+            ganador = 1;
+          }
+          break;
+      }
+      System.out.println("Gana el jugador " + ganador);
+    }
+  }
+}
