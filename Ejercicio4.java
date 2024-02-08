@@ -35,7 +35,7 @@ public class Ejercicio4 {
           }
           break;
       }
-      System.out.println("Gana el jugador " + g);
+      System.out.println("Gana el jugador " + ganador);
     }
   }
 }
